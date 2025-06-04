@@ -34,7 +34,7 @@ public class Product {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Category category;
 
-    @OneToMany(mappedBy = "purchase")
+    @OneToMany(mappedBy = "product")
     private List<ProductPurchase> purchases;
 
     public Integer getIdProduct() {
