@@ -5,6 +5,7 @@ import com.d3vlin13.market.domain.repository.IProductRepository;
 import com.d3vlin13.market.persistence.crud.IProductCrudRepository;
 import com.d3vlin13.market.persistence.entity.Producto;
 import com.d3vlin13.market.persistence.mapper.IProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,10 @@ import java.util.Optional;
 
 @Repository
 public class ProductRepository implements IProductRepository {
+    @Autowired
     private IProductCrudRepository productCrudRepository;
+
+    @Autowired
     private IProductMapper productMapper;
 
     @Override
