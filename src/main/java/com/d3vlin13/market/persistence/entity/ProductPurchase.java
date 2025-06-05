@@ -22,7 +22,7 @@ public class ProductPurchase {
 
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
-    private Product product;
+    private Producto product;
 
     public ProductPurchasePK getId() {
         return id;
